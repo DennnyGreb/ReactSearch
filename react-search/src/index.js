@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './js/App';
+import Routes from './js/Routes';
+
 import './css/index.css';
 
+
 ReactDOM.render(
-  <App />,
+  <Routes/>,
   document.getElementById('root')
 );

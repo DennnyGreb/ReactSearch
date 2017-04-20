@@ -277,3 +277,10 @@ a:hover{
 .clear{
 	clear:both;
 }
+
+/* Custom styles */
+
+.post-title {
+	cursor: pointer;
+	margin: 20px auto;
+}

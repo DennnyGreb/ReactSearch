@@ -8,7 +8,11 @@ export default class Result extends Component {
       });
     }
     else {
-      return null;
+      console.log("else");
+      console.log(this.props.isSearched);
+      if(this.props.isSearched) {
+        return <h2>Such user doesn't have any posts.</h2>;
+      }
     }
   }
   
