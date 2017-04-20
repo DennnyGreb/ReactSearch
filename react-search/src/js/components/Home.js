@@ -25,11 +25,10 @@ export default class Home extends Component {
   }
 
   handleSearch() {
-      
     let user = data.users.find((user) => {
         return user.name === this.state.value;
     });
-    let posts = []
+    let posts = [];
     if(user) {
         posts = data.posts.filter((post) => {
             return (post.userId === user.id);
@@ -41,8 +40,8 @@ export default class Home extends Component {
   render() {
     return (
         <div>
-            <Form handleChange={ this.handleChange } handleSearch={ this.handleSearch }/>
-            <Result posts={ this.state.posts } isSearched={ this.state.isSearched }/>
+            <Form handleChange={ this.handleChange } handleSearch={ this.handleSearch } />
+            <Result posts={ this.state.posts } isSearched={ this.state.isSearched } />
         </div>
     );
   }
