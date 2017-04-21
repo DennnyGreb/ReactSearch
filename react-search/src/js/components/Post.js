@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
+import { Redirect } from 'react-router-dom';
+
 import data from '../../data.json';
 
 export default class Post extends Component {
     constructor(props) {
         super(props);
         this.renderPost = this.renderPost.bind(this);
+        this.redirectBack = this.redirectBack.bind(this);
+    }
+
+    redirectBack(userName) {
+        console.log("Redirrr!");
     }
 
     renderPost() {
@@ -25,6 +32,7 @@ export default class Post extends Component {
             }
             return (
                 <div className="post-page">
+                    <div onClick={ () => { this.redirectBack(userName) } }>Redirect</div>
                     <h2 className="post-title">{ post.title }</h2>
                     <p className="post-body">{ post.body }</p>
                     <p className="post-user-name">{ userName }</p>

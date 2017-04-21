@@ -17,6 +17,7 @@ export default class Home extends Component {
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleEnterPress = this.handleEnterPress.bind(this);
     this.showTip = this.showTip.bind(this);
     this.hideTip = this.hideTip.bind(this);
   }
@@ -37,6 +38,12 @@ export default class Home extends Component {
     this.setState({
       value: event.target.value
     });
+  }
+
+  handleEnterPress(event) {
+    if(event.key === "Enter") {
+      this.handleSearch();
+    }
   }
 
   handleSearch() {
@@ -62,7 +69,7 @@ export default class Home extends Component {
   render() {
     return (
         <div>
-            <Form value={ this.state.value } data={ data } handleChange={ this.handleChange } handleSearch={ this.handleSearch } />
+            <Form handleEnterPress={ this.handleEnterPress } value={ this.state.value } data={ data } handleChange={ this.handleChange } handleSearch={ this.handleSearch } />
             <Result hideTip={ this.hideTip } showTip={ this.showTip } posts={ this.state.posts } isSearched={ this.state.isSearched } />
             <Tip isTip={ this.state.isTip } data={ data }/>
         </div>
