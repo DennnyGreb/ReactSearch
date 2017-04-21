@@ -19,7 +19,6 @@ export default class Home extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.showTip = this.showTip.bind(this);
     this.hideTip = this.hideTip.bind(this);
-    console.log(data);
   }
 
   showTip(event) {

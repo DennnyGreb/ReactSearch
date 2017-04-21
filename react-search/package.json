@@ -2,7 +2,7 @@
   "name": "react-search",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dennnygrebio.github.io/react-search",
+  "homepage": "https://dennnygrebio.github.io",
   "dependencies": {
     "react": "^15.5.4",
     "react-autocomplete": "^1.4.4",
