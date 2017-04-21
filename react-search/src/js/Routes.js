@@ -6,7 +6,7 @@ import App from './components/App';
 import Home from './components/Home';
 import Post from './components/Post';
 
-const NotFound = () => (<h2>404.. This page is not found!</h2>);
+const NotFound = () => (<h2 className="fail">404.. This page is not found!</h2>);
 
 const Routes = (props) => (
   <Router>

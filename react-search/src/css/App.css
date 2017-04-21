@@ -28,7 +28,7 @@ h1{
 	/* The search form. */
 	background-color:#4C5A65;
 	padding: 50px 50px 50px 30px;
-	margin:80px 0;
+	margin: 60px 0px 10px 0px;
 	position:relative;
 
 	-moz-border-radius:16px;
@@ -255,15 +255,13 @@ a:hover{
 .col-12 {width: 100%;}
 
 [class*="col-"] {
-    float: left;
+    display: inline-block;
     padding: 15px;
     border: 1px solid red;
 }
 
 .container {
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
 }
 
 .row {
@@ -276,6 +274,50 @@ a:hover{
     display: table;
 }
 
-.result-link {
-	min-height: 200px;
+.container .row .result-link {
+	height: 200px;
+    overflow: overlay;
+    border-radius: 10%;
+    margin: 1%;
+    background-color: #4C5A65;
+	border: none;
+}
+
+.post-page {
+	background-color: #4C5A65;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.post-page .post-title {
+	text-align: center;
+	cursor: auto;
+	font-size: 25px;
+}
+
+.post-body {
+	font-size: 20px;
+}
+
+.post-user-name {
+	font-size: 20px;
+	margin: 23px 0px;
+}
+
+.tip {
+	background-color: #4C5A65;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.fail {
+	margin: 50px 0px;
+    text-align: center;
+    font-size: 30px;
 }

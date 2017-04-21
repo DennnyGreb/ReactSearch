@@ -24,15 +24,15 @@ export default class Post extends Component {
                 }
             }
             return (
-                <div>
-                    <h2>{ post.title }</h2>
-                    <p>{ post.body }</p>
-                    <p>{ userName }</p>
+                <div className="post-page">
+                    <h2 className="post-title">{ post.title }</h2>
+                    <p className="post-body">{ post.body }</p>
+                    <p className="post-user-name">{ userName }</p>
                 </div>
             );
         }
         else {
-            return (<h2>Such post doesn't exist</h2>);
+            return (<h2 className="fail">Such post doesn't exist</h2>);
         }
     }
 
