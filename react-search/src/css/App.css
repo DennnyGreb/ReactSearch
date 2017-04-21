@@ -12,8 +12,8 @@ body{
 
 #page{
 	/* The main container div */
-	width:620px;
-	margin:100px auto 0;
+	width: 90%;
+	margin: 100px auto 0;
 }
 
 h1{
@@ -27,7 +27,7 @@ h1{
 #searchForm{
 	/* The search form. */
 	background-color:#4C5A65;
-	padding:50px 50px 30px;
+	padding: 50px 50px 50px 30px;
 	margin:80px 0;
 	position:relative;
 
@@ -36,9 +36,11 @@ h1{
 	border-radius:16px;
 }
 
-fieldset{
-	border:none;
+fieldset {
+	border: none;
+	text-align: center;
 }
+
 
 #searchInputContainer{
 	/* This div contains the transparent search box */
@@ -55,8 +57,6 @@ fieldset{
 	border:none;
 	color:#888888;
 	background:url("../../img/searchBox.png") no-repeat;
-	
-	float:left;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:15px;
 	height:36px;
@@ -67,54 +67,6 @@ fieldset{
 	text-shadow:1px 1px 0 white;
 	width:385px;
 }
-
-/* The UL that contains the search type icons */
-
-.icons{
-	list-style:none;
-	margin:10px 0 0 335px;
-	height:19px;
-	position:relative;
-}
-
-.icons li{
-	background:url("../../img/icons.png") no-repeat;
-	float:left;
-	height:19px;
-	text-indent:-9999px;
-	cursor:pointer;
-	margin-right:5px;
-}
-
-/* Styling each icon */
-
-li.web{ width:15px;}
-li.web.active,
-li.web:hover{ background-position:left bottom;}
-
-li.images{ width:22px; background-position:-18px 0;}
-li.images.active,
-li.images:hover{ background-position:-18px bottom;}
-
-li.news{ width:14px; background-position:-44px 0;}
-li.news.active,
-li.news:hover{ background-position:-44px bottom;}
-
-li.videos{ width:17px; background-position:right 0;}
-li.videos.active,
-li.videos:hover{ background-position:right bottom;}
-
-span.arrow{
-	/* The little arrow that moves below the icons */
-	
-	width:11px;
-	height:6px;
-	margin:21px 0 0 5px;
-	position:absolute;
-	background:url('../../img/arrow.png') no-repeat;
-	left:0;
-}
-
 
 /* The submit button */
 
@@ -283,4 +235,47 @@ a:hover{
 .post-title {
 	cursor: pointer;
 	margin: 20px auto;
+}
+
+.fail-result {
+	text-align: center;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.row {
+	text-align: center;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.result-link {
+	min-height: 200px;
 }
