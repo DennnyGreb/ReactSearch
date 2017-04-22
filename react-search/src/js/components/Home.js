@@ -22,6 +22,16 @@ export default class Home extends Component {
     this.hideTip = this.hideTip.bind(this);
   }
 
+  componentDidMount() {
+    if(this.props.location.query) {
+      this.setState({
+        value: this.props.location.query.userName
+      },() => {
+        this.handleSearch();
+      });
+    }
+  }
+
   showTip(event) {
     this.setState({
       isTip: true

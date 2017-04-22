@@ -321,3 +321,8 @@ a:hover{
     text-align: center;
     font-size: 30px;
 }
+
+.turn-back {
+	border-bottom: none;
+	font-size: 18px;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import data from '../../data.json';
 
@@ -8,11 +8,6 @@ export default class Post extends Component {
     constructor(props) {
         super(props);
         this.renderPost = this.renderPost.bind(this);
-        this.redirectBack = this.redirectBack.bind(this);
-    }
-
-    redirectBack(userName) {
-        console.log("Redirrr!");
     }
 
     renderPost() {
@@ -22,7 +17,6 @@ export default class Post extends Component {
                 post = data.posts[i];
             }
         }
-        console.log(data);
         if(post) {
             let userName;
             for(let i = 0; i < data.users.length; i++) {
@@ -32,7 +26,7 @@ export default class Post extends Component {
             }
             return (
                 <div className="post-page">
-                    <div onClick={ () => { this.redirectBack(userName) } }>Redirect</div>
+                    <Link to={{ pathname: "/", query: { userName: userName } }} className="turn-back">Turn back to search results</Link>
                     <h2 className="post-title">{ post.title }</h2>
                     <p className="post-body">{ post.body }</p>
                     <p className="post-user-name">{ userName }</p>
